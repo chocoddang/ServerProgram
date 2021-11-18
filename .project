@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>ReServerProgram</name>
+=======
+	<name>ServerProgram</name>
+>>>>>>> 782b6f42c92513e5b4be7891ee22a2d10efc6de7
 	<comment></comment>
 	<projects>
 	</projects>

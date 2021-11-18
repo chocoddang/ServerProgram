@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
     <wb-module deploy-name="ReServerProgram">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="context-root" value="ReServerProgram"/>
         <property name="java-output-path" value="/ReServerProgram/build/classes"/>
+=======
+    <wb-module deploy-name="ServerProgram">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="ServerProgram"/>
+        <property name="java-output-path" value="/ServerProgram/build/classes"/>
+>>>>>>> 782b6f42c92513e5b4be7891ee22a2d10efc6de7
     </wb-module>
 </project-modules>
