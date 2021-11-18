@@ -15,10 +15,10 @@ import model.BoardService;
 
 @WebServlet("*.do")
 
-
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public BoardController() {
+
+	public BoardController() {
         super();
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
