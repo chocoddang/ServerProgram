@@ -33,9 +33,23 @@ public class BoardController extends HttpServlet {
 		ModelAndView mav = null;
 		BoardService service = null;
 		switch (command) {
-		
-		}
-		
+		case "insert.board" :
+			service = new BoardListService();
+			break;
+		case "insertForm.board":
+			mav = new ModelAndView("board/insert.jsp", false);
+			break;
+		case "updateForm.board":
+			mav = new ModelAndView("board/update.jsp", false);
+			break;
+		case "update.board":
+			service = new BoardUpdateService();
+			break;
+		case "delete.board":
+			service = new BoardDeleteService();
+			break;
+
+			
 		if (service != null) {
 			try {
 				mav = service.execute(request, response);

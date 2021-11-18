@@ -4,7 +4,44 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace="dao.board">
-
 	
-
+	<select id="selectBoard" parameterType="dto.BoardDTO">
+		SELECT NO, AUTHOR, TITLE, CONTENT, HIT, IP POSTDATE
+		  FROM BOARD
+	</select>
+	
+	<!--  게시글 가져오기 -->
+	<select id="selectBoardView" parameterType="Long" resultType="dto.BoardDTO">
+		SELECT NO, AUTHOR, TITLE, CONTENT, HIT, IP POSTDATE
+		  FROM BOARD
+		 WHERE NO = #{no}
+	</select>
+	
+	
+	<!-- 조회수 늘리기 -->
+	<update id="updateBoardHit" parameterType="Long">
+		UPDATE BOARD
+		   SET HIT = HIT + 1
+		 WHERE NO = #{no}  
+	</update>
+	
+	<!-- 삽입 -->
+	<insert id="insertBoard" parameterType="dto.BoardDTO" >
+		INSERT INTO BOARD
+		VALUES (NOTICE_SEQ.NEXTVAL, #{author}, #{title}, #{content}, SYSDATE, SYSDATE)
+	</insert>
+	
+	<!-- 수정 -->
+	<update id="updateBoard" parameterType="dto.BoardDTO"> 
+		UPDATE BOARD 
+		   SET TITLE = #{title}, CONTENT = #{content}, NLASTMODIFIED = SYSDATE
+		 WHERE NNO = #{nNo}  
+	</update>
+	
+	<!-- 삭제 -->
+	<delete id="deleteBoard" parameterType="Long">
+		DELETE 
+		  FROM BOARD
+		 WHERE NNO = #{nNo} 
+	</delete>
 </mapper>
